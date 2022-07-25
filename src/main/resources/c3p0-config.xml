@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<c3p0-config>
+    <default-config>
+        <!--
+            ComboPooledDataSource cpds = new ComboPooledDataSource();
+            cpds.setDriverClass( "com.mysql.jdbc.Driver" ); //loads the jdbc driver
+            cpds.setJdbcUrl( "jdbc:postgresql://localhost/testdb" );
+            cpds.setUser("dbuser");
+            cpds.setPassword("dbpassword");
+        -->
+        <property name="driverClass">com.mysql.jdbc.Driver</property>
+        <!-- 当url连接是本地的mysql数据，且端口号是3306，就可以省略不写 -->
+        <property name="jdbcUrl">jdbc:mysql:///dt110</property>
+        <property name="user">root</property>
+        <property name="password">341221</property>
+        <property name="checkoutTimeout">30000</property>
+        <property name="idleConnectionTestPeriod">30</property>
+        <property name="initialPoolSize">10</property>
+        <property name="maxIdleTime">30</property>
+        <property name="maxPoolSize">100</property>
+        <property name="minPoolSize">10</property>
+        <property name="maxStatements">200</property>
+    </default-config>
+</c3p0-config>
