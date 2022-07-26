@@ -23,7 +23,6 @@ public class BaseServlet extends HttpServlet {
 
         // 得到要被执行的方法名
         String methodName = request.getParameter("method");
-        System.out.println(methodName);
         // 要想直到用户访问的哪一个模块的哪一个功能，我们可以通过反射的形式来获取
         Class<? extends BaseServlet> clazz = this.getClass();
         System.out.println(clazz);
